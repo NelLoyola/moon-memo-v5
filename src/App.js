@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import logo from "./Moon Memo.png";
+
 import "./App.css";
 
 export default class PhaseList extends React.Component {
@@ -11,7 +11,7 @@ export default class PhaseList extends React.Component {
   componentDidMount() {
     axios
       .get(
-        `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/New Zealand?unitGroup=us&key=5HLAMT6C2LQHXCZDZMH7X69WA&include=days&elements=datetime,moonphase`
+        `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/New Zealand?unitGroup=metric&key=5HLAMT6C2LQHXCZDZMH7X69WA&include=days&elements=datetime,moonphase`
       )
       .then((res) => {
         const phases = res.data.days;
@@ -21,10 +21,7 @@ export default class PhaseList extends React.Component {
 
   render() {
     return (
-      <div>
-        <header>
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
+      <div className="App-phases">
         <ul>
           {this.state.phases.map((phase) => (
             <p key={phase.datetime}>{phase.moonphase}</p>

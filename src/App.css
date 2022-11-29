@@ -2,26 +2,14 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 70vmin;
-  pointer-events: none;
+.App-phases {
+  color: white;
 }
 
-.App-header {
+body {
+  background-image: url("./Moon Memo.png");
   background-color: #000000;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.ul {
-  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
