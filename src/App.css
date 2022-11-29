@@ -11,5 +11,6 @@ body {
   background-color: #000000;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 10rem;
+  margin-top: 10rem;
 }
